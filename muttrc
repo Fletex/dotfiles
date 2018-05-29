@@ -1,0 +1,142 @@
+# Sending
+source ~/.muttrc_private
+set use_from      = yes
+set envelope_from = yes
+
+# Folders
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes
+set record           = ~/.sent
+set header_cache     = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+set certificate_file = ~/.mutt/certificates
+set mailcap_path     = ~/.mutt/mailcap
+set signature        = ~/.mutt/sig
+
+set mail_check  = 0
+set timeout     = 3
+set sendmail_wait = 0
+
+# Tagging
+set auto_tag
+set delete_untag
+
+# Encryption
+set crypt_autosign = no
+set crypt_replyencrypt = yes
+
+# Editor
+set charset = "utf-8"
+set editor = "vim -c 'set spell spelllang=de,en'"
+auto_view text/html
+
+# Sending
+set fast_reply
+set recall=no
+
+# Mail format
+set forward_format  = "WG: %s"
+set include
+
+# Index
+set index_format="%3C %Z %{%m%d-%R} %-20.20a %s"
+set sort=threads
+set sort_aux=reverse-last-date-received
+
+# Sidebar
+
+# Status Bar -----------------------------------------
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+#bind pager > next-page
+#bind pager < previous-page
+# Pager View Options ---------------------------------
+#set pager_index_lines = 10 # number of index lines to show
+#set pager_context = 3      # number of context lines to show
+#set pager_stop             # don't go to next message automatically
+#set menu_scroll            # scroll in menus
+#unset markers              # no ugly plus signs
+
+# View attachments properly.
+bind attach <return> view-mailcap
+
+# Other
+set pipe_decode
+set reply_to
+set sort_browser=reverse-date
+set thorough_search      # strip headers and eval mimes before searching
+set tilde
+set wait_key = no        # shut up, mutt
+unset move               # gmail does that
+
+my_hdr Bcc: $realname <$from>
+ignore *
+unignore from date subject to cc
+unignore delivered-to
+
+bind index G            imap-fetch-mail
+
+bind index R             group-reply
+bind index B             bounce-message
+bind index gg            first-entry
+#bind index G             last-entry
+bind editor      <space> noop
+
+macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
+
+# GPG
+set pgp_use_gpg_agent = yes
+set pgp_timeout = 3600
+
+# Color
+color attachment color174 color232 #Add-ons to the message
+color body       color115 color236 "^gpg: BAD signature.*"
+color body       color174 color232 "(finger|ftp|http|https|news|telnet)://[^ >]*"
+color body       color174 color232 "<URL:[^ ]*>"
+color body       color174 color232 "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+color body       color174 color232 "^-----BEGIN PGP SIGNATURE-----"
+color body       color174 color232 "^-----BEGIN PGP SIGNED MESSAGE-----"
+color body       color174 color232 "^-----END PGP SIGNATURE-----"
+color body       color174 color232 "^-----END PGP SIGNED MESSAGE-----"
+color body       color174 color232 "^Comment: .*"
+color body       color174 color232 "^Version: GnuPG.*"
+color body       color174 color232 "^gpg: Can't check signature.*"
+color body       color174 color232 "mailto: *[^ ]+\(\\i?subject=[^ ]+\)?"
+color body       color174 color232 "www\\.[-.a-z0-9]+\\.[a-z][a-z][a-z]?([-_./~a-z0-9]+)?"
+color body       color188 color232 "^gpg: Good signature.*"
+color bold       brightwhite color232
+color error      color115 color236
+color hdrdefault color223 color232
+color header     color223 color232 "^Subject"
+color index      color174 color232 ~F
+color index      color188 color232 ~A
+color index      brightred color232 ~N
+color index      color174 color232 ~D
+color index      brightred color232 ~O
+color indicator  brightwhite color232
+color indicator  color108 color236
+color markers    color142 color238
+color message    color144 color234
+color normal     brightwhite color232
+color quoted     color108 color232
+color quoted1    color116 color232
+color quoted2    color247 color232
+color quoted3    color108 color232
+color quoted4    color116 color232
+color quoted5    color247 color232
+color quoted6    color108 color232
+color quoted7    color116 color232
+color quoted8    color247 color232
+color quoted9    color108 color232
+color search     brightwhite color232
+color signature  color223 color232
+color status     color144 color234
+color tilde      color108 color232
+color tree       color109 color232
+color tree       brightwhite color232
+color underline  brightwhite color232
+
+source ~/aliases
+# vim: ft=muttrc
