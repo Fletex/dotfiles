@@ -1,0 +1,12 @@
+# Tarsnap cache directory
+cachedir ~/.tarsnap/tarsnap-cache
+
+# Tarsnap key file
+keyfile ~/.tarsnap/tarsnap.key
+print-stats
+
+# Make stats more readable
+humanize-numbers
+
+exclude *.swp
+exclude node_modules/
