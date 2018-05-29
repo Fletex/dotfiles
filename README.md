@@ -10,3 +10,4 @@
 - Stuff added by install\_private.zsh.
 	* ~/.muttrc\_private
 	* ~/.gitconfig
+    * ~/.zshenv
