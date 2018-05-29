@@ -1,11 +1,8 @@
 # dotfiles
 
-## Private State (check against .gitignore)
+## Private stuff
 
-- ./known\_hosts
-
-- ~/.ssh/config
-- ~/aliases
+- packed (see pack.sh)
 
 - Stuff added by install\_private.zsh.
 	* ~/.muttrc\_private
