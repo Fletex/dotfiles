@@ -66,6 +66,11 @@ nnoremap <leader>r :source %<CR>
 nnoremap <leader>s :.w !sh<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>x :!tmux send-keys -t 3 'clear' C-m Up Up C-m<cr>
+
+tnoremap <c-j> <c-w>j
+tnoremap <c-k> <c-w>k
+tnoremap <c-h> <c-w>h
+tnoremap <c-l> <c-w>l
 " }}}
 
 set hidden
