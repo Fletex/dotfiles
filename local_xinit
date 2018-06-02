@@ -1,7 +1,6 @@
 #!/usr/bin/zsh
 
 feh --bg-fill --randomize ~/wallpaper/ &
-unclutter -idle 1 -jitter 2 &
 xset s off -dpms &
 
 if grep -q ': wlp' <(ip link show); then

@@ -7,7 +7,6 @@ mac=`(ifconfig egress || ip link) 2> /dev/null | awk '/ether / || /lladdr/ {prin
 #ln -sf $PWD/local_$mac $HOME/.xinit_local
 
 ln -sf $PWD/local_xinit $HOME/.xinit_local
-ln -sf $PWD/Xresources  $HOME/.Xresources
 ln -sf $PWD/muttrc      $HOME/.muttrc
 ln -sf $PWD/tarsnaprc   $HOME/.tarsnaprc
 ln -sf $PWD/tmux.conf   $HOME/.tmux.conf
@@ -32,6 +31,7 @@ if [[ "$1" = "-a" ]]; then
       git clone 'https://github.com/VundleVim/Vundle.vim.git' \
         ~/.vim/bundle/Vundle.vim
       vim -c PluginInstall -c qa
+      git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
     fi
 
     # Update Vundle

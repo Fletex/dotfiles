@@ -16,11 +16,6 @@ label=ZFS
 command=~/git/dotfiles/status-bar-tool.sh
 interval=1000
 
-[status-wan]
-label=WAN
-command=~/git/dotfiles/status-bar-tool.sh
-interval=180
-
 #[status-flow]
 #label=FLOW
 #command=~/git/dotfiles/status-bar-tool.sh

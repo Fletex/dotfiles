@@ -3,8 +3,6 @@ set $mod Mod4
 font pango:Fira Mono Medium 10
 floating_modifier $mod
 
-gaps inner 4
-
 exec sh ~/.xinit_local
 
 # Window management
@@ -28,7 +26,7 @@ bindsym $mod+space   focus mode_toggle
 bindsym $mod+a       focus parent
 
 # execs
-bindsym $mod+Return          exec urxvtc
+bindsym $mod+Return          exec st
 bindsym $mod+Shift+Return    exec i3-sensible-terminal
 bindsym $mod+d               exec dmenu_run
 bindsym --release $mod+XF86Explorer    exec systemctl suspend && killall ssh

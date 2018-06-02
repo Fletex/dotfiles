@@ -1,20 +1,54 @@
 #!/usr/bin/zsh
 # vim: ft=zsh
 
-autoload -U promptinit
-promptinit
+source "${HOME}/.zgen/zgen.zsh"
 
-autoload -U compinit
-compinit
+if ! zgen saved; then
+    echo "Creating a zgen save"
 
-setopt extendedglob notify
-setopt autocd
+    zgen oh-my-zsh
+
+    # plugins
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/command-not-found
+    zgen load zsh-users/zsh-syntax-highlighting
+ #   zgen load /path/to/super-secret-private-plugin
+
+#    # bulk load
+#    zgen loadall <<EOPLUGINS
+#        zsh-users/zsh-history-substring-search
+#        /path/to/local/plugin
+#EOPLUGINS
+    # ^ can't indent this EOPLUGINS
+
+    # completions
+    zgen load zsh-users/zsh-completions src
+
+    # theme
+    zgen oh-my-zsh themes/arrow
+
+    # save all to init script
+    zgen save
+fi
+
+
+function zle-line-init () { echoti smkx }
+function zle-line-finish () { echoti rmkx }
+zle -N zle-line-init
+zle -N zle-line-finish
+
+
+#autoload -U promptinit && promptinit
+#autoload -U compinit && compinit
+#
+#setopt extendedglob notify
+#setopt autocd
 
 export GPG_TTY=`tty`
-
 #pass config/sh-wechall
 
-zstyle ':completion:*' menu select=2
+#zstyle ':completion:*' menu select=2
 
 if [[ "`uname`" = "Linux" ]]; then
     alias ls='ls --color'
@@ -37,4 +71,4 @@ alias fpl='firefox -no-remote --profile .'
 alias 010='~/.010editor/010editor'
 alias www='sftp 192.168.178.15:/var/www/nhtdocs/www'
 
-prompt bart
+#prompt bart
