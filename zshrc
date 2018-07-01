@@ -38,6 +38,7 @@ function zle-line-finish () { echoti rmkx }
 zle -N zle-line-init
 zle -N zle-line-finish
 
+export PS1="%n@%m $PS1"
 
 #autoload -U promptinit && promptinit
 #autoload -U compinit && compinit
@@ -52,6 +53,7 @@ export GPG_TTY=`tty`
 
 if [[ "`uname`" = "Linux" ]]; then
     alias ls='ls --color'
+    export PATH="/usr/lib/ccache/bin/:$PATH"
 else
     alias ls='colorls'
 fi
@@ -70,5 +72,3 @@ alias sss='sudo systemctl suspend'
 alias fpl='firefox -no-remote --profile .'
 alias 010='~/.010editor/010editor'
 alias www='sftp 192.168.178.15:/var/www/nhtdocs/www'
-
-#prompt bart
