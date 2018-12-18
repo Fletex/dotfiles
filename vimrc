@@ -53,6 +53,8 @@ command! -nargs=* Make make <args> | cwindow 3
 " {{{ Key mappings
 map <F6>  :! python -c "print(\"=\"*$COLUMNS)" && python -i %<cr>
 map <F7>  "*p
+map <F8>  :set spelllang=en spell<cr>
+map <F9>  :YcmCompleter FixIt<cr>
 
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
@@ -63,7 +65,7 @@ nnoremap <leader>c mqi/* <esc>/{<cr>%A */<esc>`q
 nnoremap <leader>j :Make<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>r :source %<CR>
-nnoremap <leader>s :.w !sh<CR>
+nnoremap <leader>s :set spelllang=en spell<cr>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>x :!tmux send-keys -t 3 'clear' C-m Up Up C-m<cr>
 
