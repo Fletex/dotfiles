@@ -17,7 +17,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
-Plugin 'rust-lang/rust.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
@@ -33,7 +32,7 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:gitgutter_max_signs = 9999
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 let g:ycm_confirm_extra_conf = 0
 
 "autocmd BufWrite */overthewire/*.py execute "!./change.sh" | redraw!
@@ -55,6 +54,7 @@ map <F6>  :! python -c "print(\"=\"*$COLUMNS)" && python -i %<cr>
 map <F7>  "*p
 map <F8>  :set spelllang=en spell<cr>
 map <F9>  :YcmCompleter FixIt<cr>
+map <F10> :pyf /usr/share/clang/clang-format.py<cr>
 
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
@@ -65,7 +65,7 @@ nnoremap <leader>c mqi/* <esc>/{<cr>%A */<esc>`q
 nnoremap <leader>j :Make<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>r :source %<CR>
-nnoremap <leader>s :set spelllang=en spell<cr>
+nnoremap <leader>s :set spelllang=de spell<cr>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>x :!tmux send-keys -t 3 'clear' C-m Up Up C-m<cr>
 
@@ -89,14 +89,14 @@ set hlsearch
 set incsearch
 set mouse=a
 set ruler
-set shiftwidth=4
+set shiftwidth=2
 set showcmd
 set showmatch
 set smarttab
-set softtabstop=4
+set softtabstop=2
 set splitbelow
 set splitright
-set tabstop=4
+set tabstop=2
 set title
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set exrc
