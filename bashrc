@@ -1,13 +1,5 @@
 #!/bin/bash
 
-export AWT_TOOLKIT=XToolkit
-export CLICOLOR=1
-export COLORFGBG="default;default"
-export EDITOR="vim"
-export BROWSER=firefox
-export PATH=$HOME/bin:/usr/share/clang:$PATH
-export GDK_BACKEND=wayland
-
 alias 010='~/.010editor/010editor'
 alias 7z='7z -bd'
 alias cpptags='ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .'
