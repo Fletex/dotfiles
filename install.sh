@@ -5,11 +5,9 @@ PWD=`pwd`
 python3 ./install.py install
 
 ln -sf $PWD/local_xinit  $HOME/.xinit_local
-ln -sf $PWD/xinitrc      $HOME/.xinitrc
 ln -sf $PWD/muttrc       $HOME/.muttrc
 ln -sf $PWD/tarsnaprc    $HOME/.tarsnaprc
 ln -sf $PWD/tmux.conf    $HOME/.tmux.conf
-ln -sf $PWD/vimrc        $HOME/.vimrc
 
 if [[ "$1" = "-a" ]]; then
     # Initialize Vundle
