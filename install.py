@@ -21,6 +21,7 @@ class DotfileMgr:
 
     def install(self):
         for l in self.link_list:
+            l["src"].parent.mkdir(parents=True, exist_ok=True)
             try:
                 l["src"].symlink_to(l["dest"])
             except FileExistsError:
