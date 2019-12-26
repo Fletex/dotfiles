@@ -16,7 +16,6 @@ then
 fi
 
 unset LC_ALL
-#export LANG=de_DE.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_MESSAGES=C
@@ -29,7 +28,4 @@ export LC_TIME=de_DE.UTF-8
 #    xinput set-prop "Elan Touchpad" "Synaptics Tap Action" 2 3 0 0 1 3 2
 #fi
 
-redshift -l 52.2:9.5 &
-
-echo "Starting at $(date)" >> ~/.logs/i3logfile-$$
-exec /usr/bin/i3 >> ~/.logs/i3logfile-$$
+exec dbus-launch --sh-syntax --exit-with-session openbox-session
