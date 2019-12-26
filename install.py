@@ -6,23 +6,26 @@ import pathlib
 class DotfileMgr:
     def create_link_list(self):
         self.link_list = []
-        for d in self.dot.glob('config/*/*'):
+        for f in self.dot.glob('config/*/*'):
             link = {
-                    'src' : self.home / ".config" / d.parent.name / d.name,
-                    'dest': d.resolve(),
+                    'src' : self.home / ".config" / f.parent.name / f.name,
+                    'dest': f.resolve(),
+                    }
+            self.link_list.append(link)
+        for f in self.dot.glob('base/*'):
+            link = {
+                    'src' : self.home / ".{}".format(f.name),
+                    'dest': f.resolve(),
                     }
             self.link_list.append(link)
 
-    def install_config(self):
+    def install(self):
         for l in self.link_list:
             try:
                 l["src"].symlink_to(l["dest"])
             except FileExistsError:
                 if l["src"].resolve() != l["dest"]:
                     print("!> Broken installation: {} -> {} (not {})".format(l["src"], l["src"].resolve(), l["dest"]))
-
-    def install(self):
-        self.install_config()
 
     def __init__(self):
         self.home = pathlib.Path.home()
