@@ -5,3 +5,5 @@ then
  eval `ssh-agent -s`
  # ssh-add < /dev/null
 fi
+
+source $HOME/.bashrc
