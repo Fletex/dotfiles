@@ -9,8 +9,6 @@ ln -sf $PWD/xinitrc      $HOME/.xinitrc
 ln -sf $PWD/muttrc       $HOME/.muttrc
 ln -sf $PWD/tarsnaprc    $HOME/.tarsnaprc
 ln -sf $PWD/tmux.conf    $HOME/.tmux.conf
-ln -sf $PWD/bashrc       $HOME/.bashrc
-ln -sf $PWD/bash_profile $HOME/.bash_profile
 ln -sf $PWD/vimrc        $HOME/.vimrc
 
 if [[ "$1" = "-a" ]]; then
