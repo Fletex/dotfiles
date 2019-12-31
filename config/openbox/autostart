@@ -17,4 +17,5 @@
 #xfce-mcs-manager &
 feh --bg-fill --randomize ~/Dropbox/wallpaper &
 tint2 &
+nm-applet &
 xcompmgr &

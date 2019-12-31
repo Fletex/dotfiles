@@ -11,6 +11,11 @@ export LC_TIME=de_DE.UTF-8
 export BROWSER=firefox
 export EDITOR="vim"
 
+function br()
+{
+  echo "$1" | sudo tee /sys/class/backlight/*/brightness
+}
+
 alias 7z='7z -bd'
 alias ffmpeg='ffmpeg -hide_banner'
 alias fpl='firefox -no-remote --profile .'

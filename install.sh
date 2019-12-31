@@ -2,7 +2,8 @@
 
 PWD=`pwd`
 
-python3 ./install.py install
+python3 ./install.py install-apt
+python3 ./install.py install-user-config
 
 ln -sf $PWD/local_xinit  $HOME/.xinit_local
 ln -sf $PWD/muttrc       $HOME/.muttrc
