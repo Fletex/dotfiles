@@ -90,9 +90,9 @@
       </startupnotify>
     </action>
   </item>
-  <item label="XChat">
+  <item label="Hexchat">
     <action name="Execute">
-      <command>xchat</command>
+      <command>hexchat</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -199,6 +199,14 @@
   <item label="Inkscape">
     <action name="Execute">
       <command>inkscape</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Steam">
+    <action name="Execute">
+      <command>~/bin/start_steam</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
