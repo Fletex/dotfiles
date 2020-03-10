@@ -23,6 +23,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
+Plugin 'gnattishness/cscope_maps'
 Plugin 'ycm-core/YouCompleteMe'
 call vundle#end()
 " }}}

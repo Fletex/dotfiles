@@ -5,7 +5,6 @@ PWD=`pwd`
 python3 ./install.py install-apt
 python3 ./install.py install-user-config
 
-ln -sf $PWD/local_xinit  $HOME/.xinit_local
 ln -sf $PWD/muttrc       $HOME/.muttrc
 ln -sf $PWD/tarsnaprc    $HOME/.tarsnaprc
 ln -sf $PWD/tmux.conf    $HOME/.tmux.conf
@@ -22,5 +21,3 @@ if [[ "$1" = "-a" ]]; then
     # Update Vundle
     vim -c PluginUpdate -c qa
 fi
-
-[[ -f install_private.zsh ]] && source install_private.zsh
