@@ -6,7 +6,6 @@ python3 ./install.py install-apt
 python3 ./install.py install-user-config
 
 ln -sf $PWD/tarsnaprc    $HOME/.tarsnaprc
-ln -sf $PWD/tmux.conf    $HOME/.tmux.conf
 ln -sf $PWD/mailcap      $HOME/.mutt/mailcap
 
 if [[ "$1" = "-a" ]]; then
