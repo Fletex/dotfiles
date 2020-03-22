@@ -7,6 +7,7 @@ firefox-esr-l10n-de
 fonts-powerline
 git
 gnome-terminal
+imagemagick
 lftp
 menu
 mpv
@@ -15,6 +16,7 @@ network-manager-gnome
 obconf
 obmenu
 openbox
+sshfs
 tint2
 tmux
 vim-airline
