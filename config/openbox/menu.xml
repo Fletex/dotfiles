@@ -101,30 +101,6 @@
 </menu>
 
 <menu id="apps-multimedia-menu" label="Multimedia">
-  <item label="Amarok">
-    <action name="Execute">
-      <command>amarok</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Rhythmbox">
-    <action name="Execute">
-      <command>rhythmbox</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="K3b">
-    <action name="Execute">
-      <command>k3b</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
   <item label="MPlayer">
     <action name="Execute">
       <command>gmplayer</command>
@@ -145,14 +121,6 @@
 </menu>
 
 <menu id="apps-fileman-menu" label="File Managers">
-  <item label="Nautilus">
-    <action name="Execute">
-      <command>nautilus --no-desktop --browser</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
   <item label="Thunar">
     <action name="Execute">
       <command>Thunar</command>
@@ -180,9 +148,25 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Gwenview">
+  <item label="Blender">
     <action name="Execute">
-      <command>gwenview</command>
+      <command>blender</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Slic3r">
+    <action name="Execute">
+      <command>slic3r.pl</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="KiCAD">
+    <action name="Execute">
+      <command>kicad</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
