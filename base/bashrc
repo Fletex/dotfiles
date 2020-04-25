@@ -16,6 +16,13 @@ function br()
   echo "$1" | sudo tee /sys/class/backlight/*/brightness
 }
 
+stm32_env()
+{
+  export PATH="/home/fh/x-tools/arm-unknown-eabi/bin:$PATH"
+  export PREFIX=arm-unknown-eabi-
+  export PLATFORM=bluepill
+}
+
 alias mpv='mpv --save-position-on-quit'
 alias 7z='7z -bd'
 alias ffmpeg='ffmpeg -hide_banner'
@@ -29,3 +36,4 @@ alias qr="qrencode -o - -t UTF8"
 alias sss='sudo systemctl suspend'
 alias whois='whois -H'
 alias ymp3='youtube-dl --extract-audio --audio-format mp3'
+alias st-ocd='openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg'
