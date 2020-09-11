@@ -7,8 +7,6 @@ import os
 
 class Apt:
     def cmd(self, module, args=[]):
-        # out = subprocess.check_output(["sudo", "apt", module] + args, sterr=subprocess.PIPE)
-        # return out.decode()
         os.system(" ".join(["sudo", "apt", module] + args))
 
     def install(self, pkgs, upgrade_first=False):

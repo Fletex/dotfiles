@@ -14,10 +14,10 @@ mpv
 mutt
 network-manager-gnome
 obconf
-obmenu
 openbox
 sshfs
 tint2
+flatpak
 tmux
 vim-airline
 vim-nox

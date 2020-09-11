@@ -1,0 +1,41 @@
+! xterm*reverseVideo: on
+xterm*saveLines: 1048576
+
+
+xterm*faceName: Source Code Pro for Powerline:size=9
+
+*.foreground:   #f3f3f3
+*.background:   #1f1f20
+*.cursorColor:  #f3f3f3
+
+! black
+*.color0:       #2a2d32
+*.color8:       #2a2d32
+
+! red
+*.color1:       #ff276d
+*.color9:       #ff276d
+
+! green
+*.color2:       #00ffdb
+*.color10:      #00ffdb
+
+! yellow
+*.color3:       #ffb863
+*.color11:      #ffb863
+
+! blue
+*.color4:       #6cb1ff
+*.color12:      #6cb1ff
+
+! magenta
+*.color5:       #b184ef
+*.color13:      #b184ef
+
+! cyan
+*.color6:       #57c3b2
+*.color14:      #57c3b2
+
+! white
+*.color7:       #f3f3f3
+*.color15:      #f3f3f0

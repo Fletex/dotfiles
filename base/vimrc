@@ -25,6 +25,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'gnattishness/cscope_maps'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
 call vundle#end()
 " }}}
 filetype plugin indent on    " required

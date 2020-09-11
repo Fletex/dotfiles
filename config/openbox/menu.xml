@@ -29,6 +29,25 @@
   </item>
 </menu>
 
+<menu id="apps-games-menu" label="Games">
+  <item label="FeedTheBeast">
+    <action name="Execute">
+      <command>~/FTBA/FTBAapp</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Steam">
+    <action name="Execute">
+      <command>~/bin/start_steam</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
 <menu id="apps-editors-menu" label="Editors">
   <item label="GVim">
     <action name="Execute">
@@ -156,6 +175,14 @@
       </startupnotify>
     </action>
   </item>
+  <item label="OpenSCAD">
+    <action name="Execute">
+      <command>openscad</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <item label="Slic3r">
     <action name="Execute">
       <command>slic3r.pl</command>
@@ -183,14 +210,6 @@
   <item label="Inkscape">
     <action name="Execute">
       <command>inkscape</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Steam">
-    <action name="Execute">
-      <command>~/bin/start_steam</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>

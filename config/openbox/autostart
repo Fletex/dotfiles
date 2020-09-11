@@ -19,3 +19,5 @@ feh --bg-fill --randomize ~/Dropbox/wallpaper &
 tint2 &
 nm-applet &
 xcompmgr &
+xset -dpms
+xset s off

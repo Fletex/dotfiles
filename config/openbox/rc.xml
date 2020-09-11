@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Surreal_Gentoo</name>
+    <name>Nightmare</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -253,8 +253,8 @@
     <keybind key="W-d">
       <action name="Execute">
         <name>dmenu</name>
-      <command>dmenu_run</command>
-    </action>
+        <command>dmenu_run</command>
+      </action>
     </keybind>
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
@@ -326,9 +326,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>gnome-terminal</name>
+          <name>xterm</name>
         </startupnotify>
-        <command>gnome-terminal</command>
+        <command>xterm</command>
       </action>
     </keybind>
     <keybind key="W-s">
@@ -344,30 +344,42 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>firefox</name>
+          <name>flatpak run org.mozilla.firefox</name>
         </startupnotify>
-        <command>firefox</command>
+        <command>flatpak run org.mozilla.firefox</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
         <command>
-    pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -8%
-  </command>
+          <!--
+          pactl set-sink-volume alsa_output.usb-C-Media_Electronics_Inc._USB_PnP_Sound_Device-00.analog-stereo -8%
+          pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -8%
+          -->
+          pactl set-sink-volume alsa_output.pci-0000_00_0e.0.analog-stereo -8%
+        </command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
         <command>
-    pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
-  </command>
+          <!--
+          pactl set-sink-mute alsa_output.usb-C-Media_Electronics_Inc._USB_PnP_Sound_Device-00.analog-stereo toggle
+          pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
+          -->
+          pactl set-sink-mute alsa_output.pci-0000_00_0e.0.analog-stereo toggle
+        </command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>
-  pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +8%
-  </command>
+          <!--
+          pactl set-sink-volume alsa_output.usb-C-Media_Electronics_Inc._USB_PnP_Sound_Device-00.analog-stereo +8%
+          pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +8%
+          -->
+          pactl set-sink-volume alsa_output.pci-0000_00_0e.0.analog-stereo +8%
+        </command>
       </action>
     </keybind>
   </keyboard>

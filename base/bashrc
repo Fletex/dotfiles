@@ -18,12 +18,29 @@ function br()
 
 stm32_env()
 {
-  export PATH="/home/fh/x-tools/arm-unknown-eabi/bin:$PATH"
-  export PREFIX=arm-unknown-eabi-
+  # export PREFIX=arm-bare_newlib_cortex_m3_nommu-eabi
+  # export CROSS_COMPILE=${PREFIX}-
+  # export PATH="/home/fh/x-tools/$PREFIX/bin:$PATH"
+  export PATH="/home/fh/x-tools/gcc-arm-none-eabi-9-2019-q4-major/bin:$PATH"
   export PLATFORM=bluepill
+  export OOCD_INTERFACE=stlink-v2
+  alias stm32_openocd='openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg'
 }
 
-alias mpv='mpv --save-position-on-quit'
+chromium_env()
+{
+  export PATH="/home/fh/git/depot_tools:$PATH"
+  export BOARD="octopus"
+}
+
+barcode_pdf()
+{
+  barcode -b "$1" -o /tmp/barcode.ps
+  ps2pdf /tmp/barcode.ps /tmp/barcode.pdf
+  mupdf /tmp/barcode.pdf
+}
+
+alias mpv='mpv --save-position-on-quit -vo=vaapi'
 alias 7z='7z -bd'
 alias ffmpeg='ffmpeg -hide_banner'
 alias fpl='firefox -no-remote --profile .'
@@ -36,4 +53,3 @@ alias qr="qrencode -o - -t UTF8"
 alias sss='sudo systemctl suspend'
 alias whois='whois -H'
 alias ymp3='youtube-dl --extract-audio --audio-format mp3'
-alias st-ocd='openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg'
