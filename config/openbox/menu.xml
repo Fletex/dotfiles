@@ -32,7 +32,7 @@
 <menu id="apps-games-menu" label="Games">
   <item label="FeedTheBeast">
     <action name="Execute">
-      <command>~/FTBA/FTBAapp</command>
+      <command>FTBApp</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -40,7 +40,7 @@
   </item>
   <item label="Steam">
     <action name="Execute">
-      <command>~/bin/start_steam</command>
+      <command>steam</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -255,6 +255,7 @@
   <separator label="Applications" />
   <menu id="apps-accessories-menu"/>
   <menu id="apps-editors-menu"/>
+  <menu id="apps-games-menu"/>
   <menu id="apps-graphics-menu"/>
   <menu id="apps-net-menu"/>
   <menu id="apps-office-menu"/>
