@@ -43,6 +43,13 @@ au BufRead,BufWrite *sgdb set filetype=gdb
 "autocmd Filetype c setlocal makeprg=gcc\ %
 "^x^f
 
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+
+
 " Vimscript file settings {{{
 augroup filetype_vim
     autocmd!

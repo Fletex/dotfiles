@@ -102,10 +102,19 @@
 <menu id="apps-net-menu" label="Internet">
   <item label="Firefox">
     <action name="Execute">
-      <command>firefox</command>
+      <command>flatpak run org.mozilla.firefox</command>
       <startupnotify>
         <enabled>yes</enabled>
         <wmclass>Firefox</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="evolution">
+    <action name="Execute">
+      <command>evolution</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>evolution</wmclass>
       </startupnotify>
     </action>
   </item>
