@@ -102,10 +102,28 @@
 <menu id="apps-net-menu" label="Internet">
   <item label="Firefox">
     <action name="Execute">
+      <command>firefox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Firefox</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Oldfox">
+    <action name="Execute">
       <command>flatpak run org.mozilla.firefox</command>
       <startupnotify>
         <enabled>yes</enabled>
         <wmclass>Firefox</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Discord">
+    <action name="Execute">
+      <command>discord</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Discord</wmclass>
       </startupnotify>
     </action>
   </item>
@@ -194,7 +212,15 @@
   </item>
   <item label="Slic3r">
     <action name="Execute">
-      <command>slic3r.pl</command>
+      <command>slic3r</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Cura">
+    <action name="Execute">
+      <command>cura</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
