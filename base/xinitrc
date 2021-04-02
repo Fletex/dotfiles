@@ -8,6 +8,7 @@ xset r rate 200 30
 setxkbmap -option caps:hyper us
 sh $HOME/.screenlayout/`hostname -s`.sh
 xrandr --dpi 120
+xrdb .Xresources
 
 if [ -z "$SSH_AGENT_PID" ];
 then
