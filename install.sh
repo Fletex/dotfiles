@@ -1,22 +1,16 @@
-#!/bin/bash
+#!/bin/sh
+set -exu
 
 PWD=`pwd`
 
-python3 ./install.py install-apt
-python3 ./install.py install-user-config
-
 ln -sf $PWD/tarsnaprc    $HOME/.tarsnaprc
-ln -sf $PWD/mailcap      $HOME/.mutt/mailcap
-
-if [[ "$1" = "-a" ]]; then
-    # Initialize Vundle
-    if [[ ! -d ~/.vim/bundle/Vundle.vim ]]
-    then
-      git clone 'https://github.com/VundleVim/Vundle.vim.git' \
-        ~/.vim/bundle/Vundle.vim
-      vim -c PluginInstall -c qa
-    fi
-
-    # Update Vundle
-    vim -c PluginUpdate -c qa
-fi
+mkdir -p $HOME/.xmonad
+ln -sf $PWD/xmonad.hs $HOME/.xmonad/
+ln -sf $PWD/xmobarrc $HOME/.xmobarrc
+ln -sf $PWD/Xresources $HOME/.Xresources
+ln -sf $PWD/bash_profile $HOME/.bash_profile
+ln -sf $PWD/bashrc $HOME/.bashrc
+ln -sf $PWD/hushlogin $HOME/.hushlogin
+ln -sf $PWD/tmux.conf $HOME/.tmux.conf
+ln -sf $PWD/vimrc $HOME/.vimrc
+ln -sf $PWD/xinitrc $HOME/.xinitrc

@@ -1,8 +1,7 @@
 ! xterm*reverseVideo: on
 xterm*saveLines: 1048576
-
-
-xterm*faceName: Source Code Pro for Powerline:size=9
+xterm*selectToClipboard: true
+xterm*faceName: Source Code Pro for Powerline:size=11
 
 *.foreground:   #f3f3f3
 *.background:   #1f1f20

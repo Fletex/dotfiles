@@ -2,7 +2,8 @@
 
 ulimit -c unlimited
 
-xset s off -dpms
+xset -dpms
+xset s off 
 xset r rate 200 30
 
 setxkbmap -option caps:hyper us
@@ -22,11 +23,15 @@ export LC_ALL=en_US.UTF-8
 export LC_MESSAGES=C
 export LC_TIME=de_DE.UTF-8
 
-#export CVSROOT="anoncvs@ftp.hostserver.de:/cvs"
+# WM=openbox-session
+WM=xmonad
 
-#if grep -q 'Elan Touchpad' <(xinput); then
-#    xinput set-prop "Elan Touchpad" "Synaptics Finger" 5 10 50
-#    xinput set-prop "Elan Touchpad" "Synaptics Tap Action" 2 3 0 0 1 3 2
-#fi
+mkdir -p /tmp/org
+# compton &
+# stalonetray &
+# gromit-mpx &
+# feh --bg-fill ~/wallpaper.png
 
-exec dbus-launch --sh-syntax --exit-with-session openbox-session
+dropbox start &
+
+exec dbus-launch --sh-syntax --exit-with-session $WM

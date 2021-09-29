@@ -1,4 +1,4 @@
 *.swp
+*~
 install_private.zsh
 known_hosts
-tgz/

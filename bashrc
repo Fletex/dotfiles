@@ -42,7 +42,8 @@ barcode_pdf()
   mupdf /tmp/barcode.pdf
 }
 
-alias mpv='mpv --save-position-on-quit -vo=vaapi'
+export PATH="$PATH:$HOME/.local/bin:/sbin"
+
 alias 7z='7z -bd'
 alias ffmpeg='ffmpeg -hide_banner'
 alias fpl='firefox -no-remote --profile .'
@@ -55,3 +56,11 @@ alias qr="qrencode -o - -t UTF8"
 alias sss='sudo systemctl suspend'
 alias whois='whois -H'
 alias ymp3='youtube-dl --extract-audio --audio-format mp3'
+alias ll='ls -li'
+alias mpv='mpv --x11-netwm=yes'
+
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+[ $TERM = "xterm" ] && TERM=xterm-256color

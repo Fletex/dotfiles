@@ -15,17 +15,10 @@ set rtp+=/usr/share/vim/vimfiles/autoload/vundle.vim
 filetype off
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'gnattishness/cscope_maps'
-Plugin 'ycm-core/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
 call vundle#end()
 " }}}
 filetype plugin indent on    " required
@@ -89,24 +82,24 @@ set hidden
 set autoindent
 
 set colorcolumn=80
+
 highlight ColorColumn ctermbg=darkgrey
 
 set number
-set relativenumber
 set ff=unix
 set expandtab
 set hlsearch
 set incsearch
 set mouse=a
 set ruler
-set shiftwidth=2
+set shiftwidth=4
 set showcmd
 set showmatch
 set smarttab
-set softtabstop=2
+set softtabstop=4
 set splitbelow
 set splitright
-set tabstop=2
+set tabstop=4
 set title
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set exrc

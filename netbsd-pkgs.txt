@@ -1,5 +1,0 @@
-vim
-git
-firefox
-openbox
-xfce4
